@@ -1,0 +1,45 @@
+<p-dropdown [options]="idiomes" [(ngModel)]="selectedIdioma" (onChange)="changedIdiom()"></p-dropdown>
+
+<div style="border:1px solid black; margin: 20px;
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;"
+>
+  <div class="ui-g">
+    <div class="ui-g-3">
+      <strong>{{'albara.numero' | translate}}</strong><br>
+      {{albara.numero}}
+    </div>
+    <div class="ui-g-3">
+        {{'albara.usuarisTotals' | translate}}<br>
+        {{albara.usuaris}}<br>
+    </div>
+    <div class="ui-g-3">
+        {{'albara.unitatsPrevistes' | translate}}<br>
+        {{albara.unitatsPrevistes}} {{'albara.hores' | translate}}<br>
+    </div>
+    <div class="ui-g-3">
+        <strong>{{'albara.costPrevist' | translate}}</strong><br>
+        {{albara.costPrevist}} &euro;<br>
+    </div>
+  </div>
+  <div class="ui-g">
+      <div class="ui-g-3">
+        {{'albara.empresa' | translate}}<br>
+        {{albara.empresa}}<br>
+      </div>
+      <div class="ui-g-3"> 
+          {{'albara.incidenciesTotals' | translate}}<br>
+          {{albara.incidencies}}<br>
+      </div>
+      <div class="ui-g-3">
+          {{'albara.unitatsRealitzades' | translate}}<br>
+          {{albara.unitatsRealitzades}} {{'albara.hores' | translate}}<br>
+      </div>
+      <div class="ui-g-3">
+          {{'albara.costFinal' | translate}}<br>
+          {{albara.costFinal}} &euro;<br>
+      </div>
+    </div>
+
+</div>

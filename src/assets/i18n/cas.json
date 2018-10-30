@@ -1,0 +1,13 @@
+{
+    "albara": {
+        "numero": "Numero de albaran",
+        "usuarisTotals": "Usuarios totales",
+        "unitatsPrevistes": "Unidades previstas",
+        "costPrevist": "Coste previsto",
+        "empresa": "Empresa",
+        "incidenciesTotals": "Incidencias totales",
+        "unitatsRealitzades": "Unidades realizadas",
+        "costFinal": "Coste final",
+        "hores": "horas"
+    }
+}
