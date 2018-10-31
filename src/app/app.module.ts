@@ -8,15 +8,24 @@ import { AppComponent } from './app.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { AlbaraComponent } from './albara/albara.component';
+import { CommonModule } from '@angular/common';
+import { DropdownModule} from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AlbaraComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    CommonModule,
+    TranslateModule,
+    DropdownModule,
+    FormsModule,
     HttpClientModule,
         TranslateModule.forRoot({
             loader: {

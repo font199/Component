@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
+import { AlbaraComponent } from './albara/albara.component';
 
 const routes: Routes = [
-  {path: '', loadChildren: './albara/albara.module#AlbaraModule'}
+  {path: '', component: AlbaraComponent}
 ];
 
 @NgModule({

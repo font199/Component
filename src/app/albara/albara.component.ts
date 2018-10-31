@@ -21,11 +21,12 @@ export class AlbaraComponent implements OnInit {
       {label:'Català', value:'ca'},
       {label:'Castellà', value:'cas'}
     ];
- 
    }
 
   ngOnInit(){
-    this.albara = this.albaraService.getAlbara();
+     this.albaraService.getAlbara().subscribe( albara => this.albara = albara );
+    //this.albara = this.albaraService.getAlbara();
+
   }
 
   changedIdiom(){

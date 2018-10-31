@@ -2,7 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { AlbaraService } from './albara.service';
 
-describe('AlbaraService', () => {
+xdescribe('AlbaraService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [AlbaraService]
