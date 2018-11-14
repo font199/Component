@@ -33,14 +33,13 @@ export class LlistatComponent implements OnInit {
 
     //El field te de correspondre amb els camps de la Tarea.
     this.cols = [
-        { field: 'nom', header: 'Nom', width: '10%'},
-        { field: 'descripcio', header: 'Descripció', width: '20%'},
-        { field: 'dataCreacio', header: 'Data creació', width: '10%' },
-        { field: 'tipus', header: 'Tipus' , width: '10%'},
-        { field: 'etiqueta', header: 'Etiqueta' , width: '15%'},
-        { field: 'periodicitat', header: 'Periodicitat', width: '10%'},
-        { field: 'accions', header: 'Accions', width: '20%'}
-
+        { field: 'nom', header: 'Nom', width: '10%', sort: true},
+        { field: 'descripcio', header: 'Descripció', width: '20%', sort: false},
+        { field: 'dataCreacio', header: 'Data creació', width: '10%', sort: true},
+        { field: 'tipus', header: 'Tipus' , width: '10%', sort: true},
+        { field: 'etiqueta', header: 'Etiqueta' , width: '15%', sort: true},
+        { field: 'periodicitat', header: 'Periodicitat', width: '10%', sort: true},
+        { field: 'accions', header: 'Accions', width: '20%', sort: false}
     ];
   }
 

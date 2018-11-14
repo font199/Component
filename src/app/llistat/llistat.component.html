@@ -2,7 +2,6 @@
     <h3> Llistat i informes</h3>
 
     <div class="ui-widget-header">
-        <!-- <input #gb style="margin: 0 0 0 30px" type="text" pInputText size="50" placeholder="Global Filter"> -->
         <input type="text" pInputText size="50" placeholder="Cerca per criteri1, criteri2" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
         <i class="fa fa-search"></i>
     </div>
@@ -37,7 +36,7 @@
                 </th>
                 <th *ngFor="let col of columns" [pSortableColumn]="col.field">
                     {{col.header}}
-                    <p-sortIcon [field]="col.field"></p-sortIcon>
+                    <p-sortIcon *ngIf="col.sort" [field]="col.field"></p-sortIcon>
                 </th>
             </tr>
         </ng-template>

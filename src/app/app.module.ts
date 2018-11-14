@@ -14,7 +14,6 @@ import { DropdownModule} from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { LlistatComponent } from './llistat/llistat.component';
 import { TableModule } from 'primeng/table';
-import { DataTableModule } from 'primeng/primeng';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 
@@ -35,7 +34,6 @@ import {InputTextModule} from 'primeng/inputtext';
     FormsModule,
     InputTextModule,
     TableModule,
-    DataTableModule,
     ButtonModule,
     HttpClientModule,
         TranslateModule.forRoot({
