@@ -12,11 +12,18 @@ import { AlbaraComponent } from './albara/albara.component';
 import { CommonModule } from '@angular/common';
 import { DropdownModule} from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
+import { LlistatComponent } from './llistat/llistat.component';
+import { TableModule } from 'primeng/table';
+import { DataTableModule } from 'primeng/primeng';
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbaraComponent
+    AlbaraComponent,
+    LlistatComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +33,10 @@ import { FormsModule } from '@angular/forms';
     TranslateModule,
     DropdownModule,
     FormsModule,
+    InputTextModule,
+    TableModule,
+    DataTableModule,
+    ButtonModule,
     HttpClientModule,
         TranslateModule.forRoot({
             loader: {

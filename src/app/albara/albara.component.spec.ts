@@ -88,19 +88,5 @@ describe('AlbaraComponent', () => {
     
   });
 
-  it('changeIdiom: lidioma a estat cambiat', () => { 
-    let idiomaSeleccionat = component.selectedIdioma ;
-    console.log('current'+translate.currentLang);
-    console.log('iosiomaSelect'+idiomaSeleccionat);
-    console.log('default'+translate.defaultLang);
-    component.changedIdiom();
-    console.log('current'+translate.currentLang);
-    console.log('iosiomaSelect'+idiomaSeleccionat);
-    console.log('default'+translate.defaultLang);
-    expect(translate.currentLang).toBe(idiomaSeleccionat);
-  });
-
-
-
 
 });

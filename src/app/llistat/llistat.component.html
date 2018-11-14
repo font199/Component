@@ -1,0 +1,53 @@
+<div style="margin: 30px">
+    <h3 class="marge"> Llistat i informes</h3>
+
+    <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none;margin:10px 10px">
+        <!-- <input #gb style="margin: 0 0 0 30px" type="text" pInputText size="50" placeholder="Global Filter"> -->
+        <input type="text" pInputText size="50" placeholder="Cerca per criteri1, criteri2" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+        <i class="fa fa-search" style="margin: 0 0 0px 10px"></i>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="marge">
+        <div class="ui-g-3">
+            Mostra
+            <p-dropdown [options]="numeros" [(ngModel)]="numero.value"></p-dropdown>
+            resultats per pàgina
+        </div>
+        <div class="ui-g-9" class="pull-right">
+            <button pButton type="button" label="Nou llistat" icon="pi pi-plus-circle" class="ui-button-secondary ample"></button>
+            <button pButton type="button" label="Filtres" icon="pi pi-filter" class="ui-button-primary ample"></button>
+        </div>
+    </div>
+
+    <p-table #dt [columns]="cols" [value]="tareas" [style]="{'margin':' 50px 50px'}" [(selection)]="selectedTareas" [paginator]="true" [rows]="numero.value">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th style="width: 3em">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th *ngFor="let col of columns">
+                    {{col.header}}
+                    <p-sortIcon [field]="col.field"></p-sortIcon>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+                </td>
+                <td style="border:0px" *ngFor="let col of columns">
+                    {{rowData[col.field]}}
+                    <div *ngIf="col.header === 'Accions'">
+                        <button pButton type="button" label="Exportar" class="ui-button-secondary"></button>
+                        <button *ngIf="rowData.tipus === 'Llistat'" pButton type="button" label="Veure" class="ui-button-secondary"></button>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
