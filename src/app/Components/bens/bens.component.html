@@ -1,0 +1,9 @@
+<div>
+    <cpr-titol-subtitol titol="Quin és el mobiliari i el nombre de caixes a traslladar?" subTitol="Introdueix els bens que es vagin a traslladar. Sense oblidar electronics"></cpr-titol-subtitol>
+    <input id="input" type="number" placeholder="Introdueix la quantitat..." size="12" pInputText [(ngModel)]="quantitat">
+    <div style="margin: 10px 0px 10px 0px">
+        <p-checkbox name="detallFragil" [(ngModel)]="esFragil" binary="true"></p-checkbox>
+        <span> Entre els béns a traslladar es troba algun d'especial fragilitat</span>
+    </div>
+    <cpr-detall *ngIf="esFragil" titol="Detall sobre elements fragils"></cpr-detall>
+</div>

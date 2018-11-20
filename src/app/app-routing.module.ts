@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
-import { AlbaraComponent } from './albara/albara.component';
-import { LlistatComponent } from './llistat/llistat.component';
+import { SolicitudComponent } from './solicitud/solicitud.component';
 
 const routes: Routes = [
-  {path: '', component: LlistatComponent}
+  {path: '', component: SolicitudComponent}
 ];
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

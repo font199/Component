@@ -1,0 +1,9 @@
+<p-card [style]="{width: '300px'}">
+    <div><i class="pi pi-info-circle" style="font-size: 25px"></i> {{titol}}</div>
+    <br>
+    <div *ngFor="let step of steps;let i=index">
+        <div class="circle" style="text-align: center">{{i+1}} </div> {{step}}
+        <br><br>
+    </div>
+
+</p-card>

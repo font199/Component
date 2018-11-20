@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Tarea } from './shared/tarea';
 import { TareasService } from './shared/tareas.service';
 import {SelectItem} from 'primeng/api';
+ 
 
-
-@Component({
+@Component({ 
   selector: 'cpr-llistat',
   templateUrl: './llistat.component.html',
   styleUrls: ['./llistat.component.css']

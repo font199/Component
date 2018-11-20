@@ -1,0 +1,16 @@
+<div style="margin: 10px 0px 10px 0px">
+    <div class=" ui-g-8 ">
+        <span>{{titol}}</span>
+        <div *ngIf="(checked && listPlena) || (!switchVisible && listPlena) ">
+            <div *ngFor="let item of listRadioButton " style="margin-top:10px">
+                <div class="ui-g-12 " style="margin-top:10px">
+                    <p-radioButton name="{{titol}}" [value]="item" [label]="item" [(ngModel)]="valCombo" [inputId]="item"></p-radioButton>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-g-4 " *ngIf="switchVisible ">
+        <p-inputSwitch [(ngModel)]="checked "></p-inputSwitch>
+    </div>
+
+</div>
