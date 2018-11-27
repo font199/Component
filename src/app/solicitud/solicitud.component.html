@@ -7,6 +7,7 @@
         <div class="p-col-8">
             <!-- Part esquerra -->
             <div class="p-grid">
+                <cpr-mobiliari class="p-col-12" (notifyMobiliariActualitzat)="ActualitzaMobiliari($event)"></cpr-mobiliari>
                 <cpr-bens class="p-col-12"></cpr-bens>
                 <cpr-trasllat class="p-col-12"></cpr-trasllat>
                 <cpr-detall class="p-col-12" titol="Observacions"></cpr-detall>
@@ -30,5 +31,10 @@
             <cpr-post-it titol="Sobre l'empaquetament, muntage i d 'esmuntatge de béns" text="NG components internally use Pri library, the official icons suite from PrimeTek."></cpr-post-it>
         </div>
 
+    </div>
+    <div class="p-col-12">
+        <p-confirmDialog></p-confirmDialog>
+        <button class="relat " pButton type="button" (click)="showAllData()">Show Data</button>
+        <p-messages [value]="msgs"></p-messages>
     </div>
 </div>

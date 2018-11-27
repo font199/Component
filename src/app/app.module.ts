@@ -23,6 +23,9 @@ import {CheckboxModule} from 'primeng/checkbox';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputSwitchModule} from 'primeng/inputswitch';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import {SpinnerModule} from 'primeng/spinner';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {MessagesModule} from 'primeng/messages';
 
 //Font awesome
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -41,6 +44,7 @@ import { DetallComponent } from './Components/detall/detall.component';
 import { TrasllatComponent } from './Components/trasllat/trasllat.component';
 import { SwitchComboComponent } from './Components/switch-combo/switch-combo.component';
 import { MobiliariComponent } from './Components/mobiliari/mobiliari.component';
+import { MobleComponent } from './Components/mobiliari/moble/moble.component';
 
 
 
@@ -58,12 +62,16 @@ import { MobiliariComponent } from './Components/mobiliari/mobiliari.component';
     DetallComponent,
     TrasllatComponent,
     SwitchComboComponent,
-    MobiliariComponent
+    MobiliariComponent,
+    MobleComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    SpinnerModule,
+    MessagesModule,
+    ConfirmDialogModule,
     InputSwitchModule,
     CommonModule,
     RadioButtonModule,
@@ -88,7 +96,7 @@ import { MobiliariComponent } from './Components/mobiliari/mobiliari.component';
           })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
 

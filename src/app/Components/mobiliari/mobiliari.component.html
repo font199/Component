@@ -1,3 +1,54 @@
-<p>
-  mobiliari works!
-</p>
+<div *ngFor="let m of mobiliari">
+    <div class=" ui-g-12 ">
+        <span class="only-show-on-hover">
+                <!-- Mostrar linea per afegir categoria -->
+                <!-- Si el moble no es el primer de la categoria, mostrarem l'opció d'afegir una categoria sobre d'ell -->
+                <div *ngIf=" m.primerCategoria === false" class=" ui-g-12 sinMargenes" style="align-items: center;display: flex;">
+                        <div class=" ui-g-11 sinMargenes">
+                            <hr>
+                        </div>
+                        <div class=" ui-g-1 sinMargenes" style="text-align: left">
+                            <i style="font-size: 25px;" class="fa fa-plus-circle" (click)="canviEstat(m)"></i>
+                        </div>
+                    </div>
+        </span>
+        <!-- Mostrar linea per posar nom de categoria -->
+        <!-- Si es el primer de la categoria i encara no hem escrit el nom -->
+        <div *ngIf="m.categoria === '' && m.primerCategoria === true" class=" ui-g-12 sinMargenes" style="align-items: center;display: flex;">
+            <div class=" ui-g-11 sinMargenes">
+                <div class=" ui-g-4 sinMargenes">
+                    <hr>
+                </div>
+                <div class=" ui-g-3 sinMargenes" style="text-align: center;">
+                    <input type="text" pInputText placeholder="Introdueix categoria" [(ngModel)]="categoria" (keydown)="canviEstat2($event, m);" />
+                </div>
+                <div class=" ui-g-4 sinMargenes ">
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mostrar categoria -->
+        <div *ngIf="m.categoria != '' && m.primerCategoria === true" class=" ui-g-12 sinMargenes" style="align-items: center;display: flex;">
+            <div class=" ui-g-11 sinMargenes">
+                <div class=" ui-g-4 sinMargenes">
+                    <hr>
+                </div>
+                <div class=" ui-g-3 sinMargenes" style="text-align: center;">
+                    <h4 class="sinMargenes">{{m.categoria}}</h4>
+                </div>
+                <div class=" ui-g-4 sinMargenes ">
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class=" ui-g-12 sinMargenes">
+        <cpr-moble [nomMoble]="m.nom" [numMobles]="m.numero" (notifyBorrarMoble)="borrarMoble($event)" (notifyActualitzarNum)="ActualitzarNumMobles($event)"></cpr-moble>
+    </div>
+</div>
+<div class=" ui-g-12 ">
+    <input type="text " placeholder="Introdueix... " pInputText [(ngModel)]="mobleEntrat" (keydown)="newMobleEnter($event)" />
+    <button class="relat " pButton type="button " icon="pi pi-plus " (click)="newMoble()" iconPos="center "></button>
+</div>

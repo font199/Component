@@ -1,0 +1,9 @@
+<div class=" ui-g-12">
+    <div class=" ui-g-7">
+        <span>{{nomMoble}}</span>
+    </div>
+    <div class=" ui-g-5" style="padding-top: 0px; padding-bottom: 0px;">
+        <p-spinner class="sinMargenes" size="3" [(ngModel)]="numMobles" [min]="0" [max]="100" (onChange)="canviatNum()"></p-spinner>
+    </div>
+    <button class="ui-button-danger relat" pButton type="button" icon="pi pi-times" (click)="borrar()" iconPos="center"></button>
+</div>

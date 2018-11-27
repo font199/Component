@@ -1,0 +1,27 @@
+input {
+    width: 100%;
+}
+
+.relat {
+    border-radius: 28px;
+    font-size: 10px;
+    margin-left: -40px;
+}
+
+div span.only-show-on-hover {
+    visibility: hidden;
+}
+
+div:hover span.only-show-on-hover {
+    visibility: visible;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sinMargenes {
+    margin: 0px;
+    padding: 0px;
+}
