@@ -8,9 +8,9 @@
                             <hr>
                         </div>
                         <div class=" ui-g-1 sinMargenes" style="text-align: left">
-                            <i style="font-size: 25px;" class="fa fa-plus-circle" (click)="canviEstat(m)"></i>
+                            <i style="font-size: 25px;" class="fa fa-plus-circle" (click)="estatMostrarInputCategoria(m)"></i>
                         </div>
-                    </div>
+                    </div> 
         </span>
         <!-- Mostrar linea per posar nom de categoria -->
         <!-- Si es el primer de la categoria i encara no hem escrit el nom -->
@@ -20,7 +20,7 @@
                     <hr>
                 </div>
                 <div class=" ui-g-3 sinMargenes" style="text-align: center;">
-                    <input type="text" pInputText placeholder="Introdueix categoria" [(ngModel)]="categoria" (keydown)="canviEstat2($event, m);" />
+                    <input type="text" pInputText placeholder="Introdueix categoria" [(ngModel)]="categoria" (keydown.enter)="estatMostratTitolCategoria(m);" />
                 </div>
                 <div class=" ui-g-4 sinMargenes ">
                     <hr>
@@ -45,10 +45,10 @@
 
     </div>
     <div class=" ui-g-12 sinMargenes">
-        <cpr-moble [nomMoble]="m.nom" [numMobles]="m.numero" (notifyBorrarMoble)="borrarMoble($event)" (notifyActualitzarNum)="ActualitzarNumMobles($event)"></cpr-moble>
+        <cpr-moble [nomMoble]="m.nom" [numMobles]="m.numero" (notifyBorrarMoble)="borrarMoble(m)" (notifyActualitzatNum)="ActualitzarNumMobles(m,$event)"></cpr-moble>
     </div>
 </div>
 <div class=" ui-g-12 ">
-    <input type="text " placeholder="Introdueix... " pInputText [(ngModel)]="mobleEntrat" (keydown)="newMobleEnter($event)" />
-    <button class="relat " pButton type="button " icon="pi pi-plus " (click)="newMoble()" iconPos="center "></button>
+    <input type="text " placeholder="Introdueix... " pInputText [(ngModel)]="mobleEntrat" (keydown.enter)="newMoble(mobleEntrat)" />
+    <button class="relat " pButton type="button " icon="pi pi-plus " (click)="newMoble(mobleEntrat)" iconPos="center "></button>
 </div>

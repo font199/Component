@@ -5,7 +5,7 @@ import { StepsComponent } from './steps.component';
 import {StepsModule} from 'primeng/steps';
 import {MenuItem} from 'primeng/api';
 
-describe('StepsComponent', () => {
+xdescribe('StepsComponent', () => {
   let component: StepsComponent;
   let fixture: ComponentFixture<StepsComponent>;
 

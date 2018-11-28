@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SwitchComboComponent } from './switch-combo.component';
 
-describe('SwitchComboComponent', () => {
+xdescribe('SwitchComboComponent', () => {
   let component: SwitchComboComponent;
   let fixture: ComponentFixture<SwitchComboComponent>;
 

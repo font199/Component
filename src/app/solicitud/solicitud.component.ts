@@ -28,10 +28,15 @@ export class SolicitudComponent implements OnInit {
 
     this.missatge = '*Mobiliari:* <br/>';
 
+    //Dades del component Mobiliari
     let i:number;
     for( i=0; i < this.mobiliari.length; i++){
      this.missatge += '['+this.mobiliari[i].nom+' , '+this.mobiliari[i].numero+' , '+this.mobiliari[i].categoria+' , '+this.mobiliari[i].primerCategoria+' </br>';      
     }
+
+    //Dades del component Bens
+    
+
 
     this.cs.confirm({
       message: this.missatge,
